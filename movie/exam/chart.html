@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+</head>
+
+<body>
+  <canvas id="polar-chart" width="250" height="250"></canvas>
+
+  <script>
+    // DOM이 완전히 로드된 후 차트를 그리기 위해 window.onload 사용
+    window.onload = () => {
+      new Chart(document.getElementById("polar-chart"), {
+        type: 'polarArea',
+        data: {
+          labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
+          datasets: [
+            {
+              label: "Population (millions)",
+              backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+              data: [2478,5267,734,784,433]
+            }
+          ]
+        },
+        options: {
+          title: {
+            display: true,
+            text: 'Predicted world population (millions) in 2050'
+          }
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>

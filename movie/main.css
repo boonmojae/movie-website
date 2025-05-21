@@ -1,0 +1,90 @@
+/*Main*/
+html {
+    overflow-y: scroll;
+}
+
+.custom-headerItem1 .nav-link,
+.custom-headerItem2 .nav-link,
+.custom-headerItem3 .nav-link {
+    color: black;
+    font-weight: 500;
+}
+
+.custom-headerItem1 :hover, .custom-headerItem1-a {
+    background-color: rgb(255, 74, 246);
+}
+
+.custom-headerItem2 :hover, .custom-headerItem2-a {
+    background-color: rgb(98, 255, 74);
+}
+
+.custom-headerItem3 :hover, .custom-headerItem3-a {
+    background-color: rgb(74, 228, 255);
+}
+
+/*Main 이미지 랜덤 뿌리기*/
+.custom-random-movieList-position {
+    position: relative;/*내 위치 고정*/
+    width: 100%;
+    height: 94vh;
+    /* 높이 없으면 0으로 인식해서 안 보임 */
+    overflow: hidden;
+}
+
+.random-img {
+    position: absolute;/*부모 중 가장 가까운 relatice를 기준으로 배치*/
+    object-fit: cover;
+    /*이미지 잘라내도 비율 유지하고 꽉 채움*/
+}
+
+
+/*Search*/
+
+.custom-searchNav-position {
+    margin-top: 7vh;
+}
+
+.custom-category-btn-position {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.custom-category-btn-pink-outline {
+    border: 1px solid rgb(255, 74, 246);
+    color: rgb(255, 74, 246);
+    width: 110px;
+    height: 30px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-btn-pink-outline {
+    border: 1px solid rgb(255, 74, 246);
+    color: rgb(255, 74, 246);
+}
+
+.custom-category-btn-pink-outline:hover, 
+.custom-category-btn-pink-outline-a,/*카테고리 선택시 고정*/
+.custom-btn-pink-outline:hover {
+    background-color: rgb(255, 74, 246);
+    color: white;
+}
+
+.custom-search-movie-list {
+    margin-top: 15vh;
+}
+
+.custom-col-margin {
+    margin-bottom: 6vh;
+}
+.custom-card-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }

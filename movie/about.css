@@ -1,0 +1,78 @@
+html {
+  overflow-y: scroll;
+}
+
+/*별*/
+.star {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: yellow;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%,
+      50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  opacity: 0.8;
+  pointer-events: none;
+  animation: fadeOut 1s ease forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+}
+
+main {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  /*높이 줘야 이벤트 영역이 생김 */
+}
+
+/*별*/
+.mouse {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  color: #ffc107;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 14vh;
+
+}
+
+.about-img {
+  width: 500px;
+}
+
+.name {
+  font-family: 'Poppins', sans-serif;
+  margin-top: 2vh;
+  font-size: 30px;
+}
+
+a {
+  all: unset;
+  text-decoration: none;
+  cursor: pointer;
+}
+.gitLink {
+  margin: 10px 0;
+  font-weight: 600;
+  margin-bottom: 3vh;
+}
+.gitLink:hover {
+  margin: 10px 0;
+  font-weight: 600;
+  color: #ffc107;
+  margin-bottom: 3vh;
+}
+.custom-pie-chart {
+  width: 300px !important;
+  height: 300px !important;
+}
